@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Projects</title>
+    <link rel="stylesheet" href="css/opmaak.css" type="text/css">
+  </head>
+  <body>
+    <div class="menu">
+
+      <header>
+          <h1>My portfolio</h1>
+      </header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="over mij.html">About me</a></li>
+          <li><a href="mijn badges en certificaten.html">My Certificates</a></li>
+          <li><a href="projecten.html">Projects</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+    <div class="wrapper">
+    <section>
+      <article>
+        <h2 class="h2">F-BTDES</h2>
+        <h2> Franklin Behind The Door Eavesdropping Sensor</h2>
+        <br>
+        <p>Often people are  behind the door listening to what you say. <br>
+          How can you know if that is happening now? Place a thin sensor under your floor mat.<br>
+          When they stand on your mat to listen, a sensor light turns on.<br>
+          <br>
+          below you will find a diagram of how the sensor mat is constructed <br>
+          <br>
+          tell me if it works for you or give me a like :D</p> <br>
+        <br>
+        <img class="eavesdropping-sensor" src="images/eaves1.PNG" alt="">
+        <br>
+        <br>
+        <h2 class="v2">What happens: </h2><br>
+        the weight on the sensor/mat presses the indicated in purple <br>
+        aluminum foil against the blue-gray indicated aluminum foil.<br>
+        This creates a closed circuit, causing the lamp to light up. <br>
+        <br>
+        <br>
+        <br>
+        <img class="eavesdropping-sensor" src="images/eaves2.PNG" alt="">
+      </article>
+      <br>
+      <br>
+      <br>
+      <article class="jsbot">
+
+        <h2 class="h2">JS bot</h2>
+        <br>
+        <p>
+          I made a little bot with Discord.js <br>
+          the bot can add roles to people based on a message.<br>
+          Its still needs a little tweeking(i need to add much more functions).<br>
+          <br>
+          <br>
+          <h2 class="v2">Here is the code:</h2><br>
+          <div class="comment">
+          /*Importing a package and save as Discord*/<br>
+          </div>
+
+          const Dis = require(' Discord.js');<br>
+          <br>
+
+          <div class="comment">
+          /*Here i save the roles id as a role name*/<br></div>
+
+          const rules_accepted =  '719889769038872616'<br>
+          const Spacecowmooncheese_member = '719217242176356396'<br>
+          <br>
+
+          <div class="comment">
+            /*Here is save the bot as a variable named bot*/<br>
+          </div>
+
+          const bot = new Discord.Client();<br>
+          <br>
+
+          <div class="comment">
+          /*Here if say if the bot is on proceed further with the commands*/<br>
+          </div>
+
+          bot.on('message', (message) => {<br>
+            <br>
+
+            <div class="comment">
+            /*Here is split the message at the space between the words <br>
+            i can determine better which command belong to another (to sort them better)*/<br>
+            </div>
+
+            const parts = message.content.split(' ')<br>
+            <br>
+
+            <div class="comment">
+            /*If the first part is "v!role" proceed further with the v!role commands*/<br>
+            </div>
+
+            if (parts[0]=='v!role'){<br>
+            <br>
+
+            <div class="comment">
+                /*If the second part of the message is a certain role give the person who send that message that role*/<br>
+                </div>
+
+                if(parts[1] == 'Spacecowmooncheese'){<br>
+                  message.member.roles.add(Spacecowmooncheese_member);<br>
+                  message.reply('you got the role Spacecowmooncheese_member')
+                }<br>
+            }<br>
+            <br>
+
+            <div class="comment">
+            /*Else if he first part is v!help <br>
+            show them what the commands are and give them a little explaination*/<br>
+            </div>
+
+            else if (parts[1] == 'v!help'){<br>
+                message.reply('typ: "v!accept" to accept rules and get started with your journey.')<br>
+            }<br>
+            <br>
+
+            <div class="comment">
+            /*Else if he first part is v!accept <br>
+            give them the rules accepted role and say that <br>
+            you have given the rules accept roles*/<br>
+          </div>
+
+            else if (message.content == 'v!accept'){<br>
+                message.reply('You accepted the rules and earnt the role: "rules-accepted"');<br>
+                message.member.roles.add(rules_accepted);<br>
+            }<br>
+          });<br>
+          <br>
+
+          <div class="comment">
+            /*Here the bots log in with the regeneratable password <br>
+            this is actually not the exact password due some security reasons*/
+          </div>
+          bot.login('NzE5ODY3MTE4OTU4NDExODE3.Xt-IhQ.FsbcDiQKjKhN4KrZvG1pItEmJ1');<br>
+          </p>
+          </div>
+      </article>
+    </section>
+    <footer>
+      <h3>Made with &hearts; by Franklin</h3>
+    </footer>
+  </body>
+</html>
